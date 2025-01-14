@@ -1,20 +1,16 @@
 
-function determineQuadrant(x, y){
-    if(x > 0 && y > 0){
-        return "Quadrant 1";
-    }
-    else if(x < 0 && y > 0){
-        return "Quadrant 2";
-    }
-    else if(x < 0 && y < 0){
-        return "Quadrant 3";
-    }
-    else if(x > 0 && y < 0){
-        return "Quadrant 4";
-    }
-}
+let x = 5;
+let y = 3;
 
-console.log(determineQuadrant(3, 4));
-console.log(determineQuadrant(-6, 4));
-console.log(determineQuadrant(-6, -4));
-console.log(determineQuadrant(4, -4));
+if(x > 0 && y > 0){
+    console.log("Quadrant 1");
+}
+else if(x < 0 && y > 0){
+    console.log("Quadrant 2");
+}
+else if(x < 0 && y < 0){
+    console.log("Quadrant 3");
+}
+else if(x > 0 && y < 0){
+    console.log("Quadrant 4");
+}
