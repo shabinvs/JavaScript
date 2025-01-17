@@ -1,5 +1,5 @@
 
-let score = 80;
+let score = 70;
 
 switch(Math.floor(score/10)){
     case 10:

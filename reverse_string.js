@@ -4,7 +4,7 @@
 // console.log(str.split("").reverse().join(""));
 
 
-let str = "hello";
+let str = "malappuram";
 
 var newstring = "";
 

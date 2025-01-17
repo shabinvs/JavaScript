@@ -11,4 +11,4 @@ switch((num%2)){
     default:
         console.log("enter a number!!!");
         break;
-    }
+}
