@@ -1,0 +1,334 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <style>
+
+        .container{
+            width: 350px;
+            height: 400px;
+            margin: 10px auto;
+            background-color: aquamarine;   
+            box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        #heading{
+            text-align: center;
+            color: white;
+            text-shadow: 2px 3px 2px rgba(69, 33, 186, 0.708);
+        }
+
+        .BMI{
+            margin-top: 60px;
+        }
+
+        .heading2{
+            text-align: center;
+            padding: 15px;
+            background-color: rgb(30, 125, 125);
+            color: white;
+            text-shadow: 1px 2px 1px rgb(36, 73, 177);
+        }
+
+        .data input{
+            width: 196px;
+            margin: 8px 0;
+            height: 25px;
+            outline: none;
+        }
+
+        .data{
+            padding: 40px 30px;
+        }
+
+        .data button{
+            border: none;
+            margin-left: 12px;
+            border-radius: 3px;
+
+        }
+
+        .f-btn{
+            background-color: rgb(102, 177, 37);
+            width: 95px;
+            height: 30px;
+        }
+
+        .f-btn:hover{
+            background-color: rgb(199, 121, 18);
+            cursor: pointer;
+            color: white;
+            box-shadow: 1px 2px 3px gray;
+        }
+
+        .s-btn{
+            background-color: rgb(53, 160, 160);
+            width: 95px;
+            height: 30px;
+        }
+
+        .s-btn:hover{
+            background-color: rgb(18, 72, 199);
+            cursor: pointer;
+            color: white;
+            box-shadow: 1px 2px 3px gray;
+        }
+
+        .buttons{
+            margin: 13px 0 20px 38px;
+        }
+
+        input::placeholder {  
+            text-align: center;  
+        }  
+
+        #display{
+            height: 50px;
+            margin-left: 50px;
+        }
+
+        body{
+            background-color: rgb(239, 176, 54);
+        }
+
+        #display{
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+
+        #result{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="BMI">
+        <h1 id="heading">BMI - Calculator</h1>
+        <div class="container">
+            <h2 class="heading2">Metric units</h2>
+            <div class="data">
+                <label>Height: </label>
+                <input type="number" placeholder="Centimeter" id="num1"><br>
+                <label>Weight: </label>
+                <input type="number" placeholder="Kilogram" id="num2">
+                <div class="buttons">
+                    <button class="f-btn" id="first" onclick="Calculate()">Calculate</button>
+                    <button class="s-btn" id="second" onclick="remove()">Clear</button>
+                </div>
+                <input type="number" id="display" readonly>
+                <h3 id="result"></h3>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+
+        let Calculate = () => {
+            let height = parseInt(document.getElementById('num1').value);
+            let weight = parseInt(document.getElementById('num2').value);
+
+            if(isNaN(height) || isNaN(weight) || height<=0 || weight<=0){
+                alert('enter a valid height and weight!');
+                return;
+            }
+
+            let heightMeter = height/100;
+            
+            let bmi = (weight / (heightMeter*heightMeter)).toFixed(2);
+            document.getElementById('display').value = `BMI: ${bmi}`;
+
+            if(bmi<18.5){
+                document.getElementById('result').innerHTML = 'underweight';
+            }
+            else if(bmi>=18.5 && bmi<25){
+                document.getElementById('result').innerHTML = 'Normal';
+            }
+            else if(bmi>=25 && bmi<30){
+                document.getElementById('result').innerHTML = 'Overweight';
+            }
+            else{
+                document.getElementById('result').innerHTML = 'obesity';
+            }
+            
+        }
+        
+
+        let remove = () => {
+            document.getElementById('num1').value = "";
+            document.getElementById('num2').value = "";
+            document.getElementById('display').value = "";
+        }
+
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <style>
+        /* Same styles as in your code */
+        .container{
+            width: 350px;
+            height: 400px;
+            margin: 10px auto;
+            background-color: aquamarine;   
+            box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        #heading{
+            text-align: center;
+            color: white;
+            text-shadow: 2px 3px 2px rgba(69, 33, 186, 0.708);
+        }
+
+        .BMI{
+            margin-top: 60px;
+        }
+
+        .heading2{
+            text-align: center;
+            padding: 15px;
+            background-color: rgb(30, 125, 125);
+            color: white;
+            text-shadow: 1px 2px 1px rgb(36, 73, 177);
+        }
+
+        .data input{
+            width: 196px;
+            margin: 8px 0;
+            height: 25px;
+            outline: none;
+        }
+
+        .data{
+            padding: 40px 30px;
+        }
+
+        .data button{
+            border: none;
+            margin-left: 12px;
+            border-radius: 3px;
+
+        }
+
+        .f-btn{
+            background-color: rgb(102, 177, 37);
+            width: 95px;
+            height: 30px;
+        }
+
+        .f-btn:hover{
+            background-color: rgb(199, 121, 18);
+            cursor: pointer;
+            color: white;
+            box-shadow: 1px 2px 3px gray;
+        }
+
+        .s-btn{
+            background-color: rgb(53, 160, 160);
+            width: 95px;
+            height: 30px;
+        }
+
+        .s-btn:hover{
+            background-color: rgb(18, 72, 199);
+            cursor: pointer;
+            color: white;
+            box-shadow: 1px 2px 3px gray;
+        }
+
+        .buttons{
+            margin: 13px 0 20px 38px;
+        }
+
+        input::placeholder {  
+            text-align: center;  
+        }  
+
+        #display{
+            height: 50px;
+            margin-left: 50px;
+        }
+
+        body{
+            background-color: rgb(239, 176, 54);
+        }
+
+        #display{
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+
+        #result{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="BMI">
+        <h1 id="heading">BMI - Calculator</h1>
+        <div class="container">
+            <h2 class="heading2">Metric units</h2>
+            <div class="data">
+                <label>Height: </label>
+                <input type="number" placeholder="Centimeter" id="num1"><br>
+                <label>Weight: </label>
+                <input type="number" placeholder="Kilogram" id="num2">
+                <div class="buttons">
+                    <button class="f-btn" id="first" onclick="Calculate()">Calculate</button>
+                    <button class="s-btn" id="second" onclick="remove()">Clear</button>
+                </div>
+                <input type="text" id="display" readonly>
+                <h3 id="result"></h3>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let Calculate = () => {
+            let height = parseInt(document.getElementById('num1').value);
+            let weight = parseInt(document.getElementById('num2').value);
+
+            if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
+                alert('Enter a valid height and weight!');
+                return;
+            }
+
+            let heightMeter = height / 100;
+            let bmi = (weight / (heightMeter * heightMeter)).toFixed(2);
+
+            // Display the BMI value in the input field
+            document.getElementById('display').value = `BMI: ${bmi}`;
+
+            // Update the result text based on the BMI category
+            if (bmi < 18.5) {
+                document.getElementById('result').innerHTML = 'Underweight';
+            } else if (bmi >= 18.5 && bmi < 25) {
+                document.getElementById('result').innerHTML = 'Normal';
+            } else if (bmi >= 25 && bmi < 30) {
+                document.getElementById('result').innerHTML = 'Overweight';
+            } else {
+                document.getElementById('result').innerHTML = 'Obesity';
+            }
+        };
+
+        let remove = () => {
+            document.getElementById('num1').value = "";
+            document.getElementById('num2').value = "";
+            document.getElementById('display').value = "";
+            document.getElementById('result').innerHTML = "";
+        };
+    </script>
+</body>
+</html>
