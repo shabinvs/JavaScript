@@ -1,12 +1,13 @@
 let pattern = "";
 
 for(let i=5; i>=1; i--){
+    let x = 1;
     for(let j=1; j<=5-i; j++){
         pattern += " ";
     }
 
     for(let k=1; k<=i; k++){
-        pattern += "* ";
+        pattern += x;
     }
 
     pattern += "\n";

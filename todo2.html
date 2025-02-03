@@ -15,7 +15,7 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #a5d6bd;
-            height: 100vh;
+            /* height: 100vh; */
             margin: 0;
         }
 
@@ -26,7 +26,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 300px;
             text-align: center;
-            margin: 80px auto;
+            margin: 200px auto;
         }
 
         h1 {
@@ -57,6 +57,7 @@
         ul {
             list-style-type: none;
             padding: 0;
+            margin: 20px 0;
         }
 
         li {
@@ -68,6 +69,7 @@
             justify-content: space-between;
             align-items: center;
         }
+        
     </style>
 </head>
 <body>
@@ -75,7 +77,7 @@
     <div class="container">
         <h1>Todo List</h1>
         <input type="text" id="taskInput" placeholder="Add a new task...">
-        <button onclick="addTask()">Add Task</button>
+        <button onclick="addTask()" id="f-btn">Add Task</button>
         <ul id="taskList"></ul>
     </div>
 
